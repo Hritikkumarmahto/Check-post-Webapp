@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",          // Inherit from the main tsconfig.
+  "compilerOptions": {
+    "outDir": "./dist",                  // Ensure Vercel uses the compiled files from dist.
+    "rootDir": "./server",                // Ensure the source files are from the correct directory.
+    "target": "ES2020"                    // Ensure the correct ECMAScript version for production.
+  },
+  "include": ["server/**/*.ts"]           // Ensure Vercel includes all TypeScript files.
+}

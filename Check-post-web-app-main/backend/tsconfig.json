@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                   // JavaScript output version.
+    "module": "ESNext",                   // Use modern module system (ESM).
+    "moduleResolution": "Node",           // Resolve modules using Node.js conventions.
+    "outDir": "./dist",                   // Output compiled files to the 'dist' directory.
+    "rootDir": "./server",                // Base directory for TypeScript source files.
+    "strict": true,                       // Enable strict type-checking options.
+    "esModuleInterop": true,              // Allow CommonJS to interoperate with ESModules.
+    "skipLibCheck": true,                 // Skip type-checking of third-party libraries.
+    "resolveJsonModule": true             // Allow importing JSON files as modules.
+  },
+  "include": ["server/**/*.ts", "server/index.js"],           // Include all TypeScript files from the 'server' directory.
+  "exclude": ["node_modules", "dist"]      // Exclude node_modules and the output folder from being compiled.
+}

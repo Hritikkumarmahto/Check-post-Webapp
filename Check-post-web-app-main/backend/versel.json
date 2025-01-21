@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "name": "check-post-web-app",
+  "builds": [
+    {
+      "src": "backend/server/index.ts",
+      "use": "@vercel/node",
+      "config": {
+        "maxLambdaSize": "50mb",
+        "includeFiles": [
+          "backend/server/routes/**",
+          "backend/server/services/**"
+        ]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/server/index.ts"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "backend/server/index.ts"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "buildCommand": "cd backend && npm run build",
+  "devCommand": "cd backend && npm run dev",
+  "installCommand": "cd backend && npm install"
+}

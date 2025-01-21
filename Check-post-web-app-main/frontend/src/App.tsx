@@ -6,7 +6,9 @@ import { ThemeToggle } from "./components/ThemeToggle";
 import type { AnalysisResult, FileStatus } from "./types";
 import AppIcon from "./assets/app-icon.svg";
 
-const apiUrl = import.meta.env.VITE_API_URL;
+//const apiUrl = import.meta.env.VITE_API_URL;
+const apiUrl = "https://check-post-webapp-api.vercel.app";
+
 
 function App() {
   const [fileStatus, setFileStatus] = useState<FileStatus>("idle");
